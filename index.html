@@ -4,11 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/loveyou.css" />
+    <script src="./script/script.js"></script>
     <title>Heart.io Design By Datto</title>
   </head>
+
   <body>
-    <canvas id="heart"></canvas>
+    <canvas id="heartMain" class="show"></canvas>
+    <div id="meow" class="container hidden">
+      <div class="text">
+        <ul>
+          <li></li>
+          <li>Me when see my Crush :</li>
+        </ul>
+      </div>
+      <div class="cat" onclick="hello()">
+        <div class="catHead"></div>
+        <div class="catEars">
+          <span class="rightEar"></span>
+        </div>
+        <div class="face">
+          <span class="mouth"></span>
+        </div>
+        <div id="leftPaw" class="leftPaw">
+          <span id="paws" class="paws">
+                        <span id="circles" class="circles"></span>
+          </span>
+        </div>
+        <div id="rightPaw" class="rightPaw">
+          <span id="rpaws" class="paws">
+                        <span id="rcircles" class="circles"></span>
+          </span>
+        </div>
+      </div>
+      <div class="surface">
+        <span><i id="retweet" class="fas fa-retweet"></i></span>
+        <span><i id="heart" class="rotate fas fa-heart"></i></span>
+        <span class="author"><a href="https://www.facebook.com/datnguyen1508/">@Create By Datto ^^</a></span>
+      </div>
+    </div>
   </body>
 </html>

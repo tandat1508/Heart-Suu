@@ -27,7 +27,7 @@ var init = function () {
   loaded = true;
   var mobile = window.isDevice;
   var koef = mobile ? 0.5 : 1;
-  var canvas = document.getElementById("heart");
+  var canvas = document.getElementById("heartMain");
   var ctx = canvas.getContext("2d");
   var width = (canvas.width = koef * innerWidth);
   var height = (canvas.height = koef * innerHeight);
@@ -157,6 +157,41 @@ var init = function () {
     window.requestAnimationFrame(loop, canvas);
   };
   loop();
+  setTimeout(() => {
+    const heart = document.getElementById("heartMain").classList;
+    heart.toggle("hidden");
+    setInterval(() => {
+      const container = document.getElementById("meow").classList;
+      container.remove("hidden");
+      container.toggle("show");
+      // loop();
+      hello();
+    }, 500);
+  }, 5000);
+
+  var hello = function () {
+    const x = 5;
+    const leftPaw = document.getElementById("leftPaw").classList;
+    const rightPaw = document.getElementById("rightPaw").classList;
+    const paws = document.getElementById("paws").classList;
+    const circles = document.getElementById("circles").classList;
+    const rpaws = document.getElementById("rpaws").classList;
+    const rcircles = document.getElementById("rcircles").classList;
+    const retweet = document.getElementById("retweet").classList;
+    const heart = document.getElementById("heart").classList;
+    leftPaw.toggle("leftPaw");
+    rightPaw.toggle("rightPaw");
+    paws.toggle("paws");
+    circles.toggle("circles");
+    rpaws.toggle("paws");
+    rcircles.toggle("circles");
+    leftPaw.toggle("leftPaw2");
+    rightPaw.toggle("rightPaw2");
+    retweet.toggle("green");
+    heart.toggle("red");
+    // change number for speed
+    setTimeout(hello, x * 20);
+  };
 };
 
 var s = document.readyState;
